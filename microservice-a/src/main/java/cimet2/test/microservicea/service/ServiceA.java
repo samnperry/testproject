@@ -9,10 +9,10 @@ public class ServiceA {
     private final RestTemplate restTemplate = new RestTemplate();
 
     public String callServiceB() {
-        return restTemplate.getForObject("http://localhost:8081/service-b/endpoint", String.class);
+        return restTemplate.getForObject("/service-b/endpoint", String.class);
     }
 
     public String callServiceC() {
-        return restTemplate.getForObject("http://localhost:8082/service-c/endpoint", String.class);
+        return restTemplate.getForObject("/service-c/endpoint", String.class);
     }
 }
