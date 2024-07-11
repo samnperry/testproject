@@ -15,12 +15,12 @@ public class ServiceAController {
         this.serviceA = serviceA;
     }
 
-    @RequestMapping(value = "/call-b", method = RequestMethod.GET)
+    @RequestMapping(path = "/call-b", method = RequestMethod.GET)
     public String callServiceB() {
         return serviceA.callServiceB();
     }
 
-    @RequestMapping(value = "/call-c", method = RequestMethod.GET)
+    @RequestMapping(path = "/call-c", method = RequestMethod.GET)
     public String callServiceC() {
         return serviceA.callServiceC();
     }
