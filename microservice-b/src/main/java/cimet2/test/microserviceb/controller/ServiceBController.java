@@ -1,15 +1,20 @@
-package cimet2.test.microserviceb;
+package cimet2.test.microserviceb.controller;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import org.springframework.web.client.RestTemplate;
+
+import cimet2.test.microserviceb.service.ServiceB;
 
 @RestController
 @RequestMapping("/service-b")
-public class ServiceB {
+public class ServiceBController {
 
-    private final RestTemplate restTemplate = new RestTemplate();
+    private final ServiceB serviceB;
+
+    public ServiceBController(ServiceB serviceB) {
+        this.serviceB = serviceB;
+    }
 
     @GetMapping("/endpoint")
     public String endpoint() {
@@ -18,6 +23,6 @@ public class ServiceB {
 
     @GetMapping("/call-d")
     public String callServiceD() {
-        return restTemplate.getForObject("http://localhost:8083/service-d/endpoint", String.class);
+        return serviceB.callServiceD();
     }
 }

@@ -1,1 +1,5 @@
 /.vscode
+microservice-a/target/
+microservice-b/target/
+microservice-c/target/
+microservice-d/target/
