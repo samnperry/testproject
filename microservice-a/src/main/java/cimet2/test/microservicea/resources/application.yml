@@ -1,0 +1,17 @@
+management:
+  health:
+    circuitbreakers:
+      enabled: true
+    ratelimiters:
+      enabled: true
+
+resilience4j:
+  circuitbreaker:
+    configs:
+      default:
+        registerHealthIndicator: true
+
+  ratelimiter:
+    configs:
+      instances:
+        registerHealthIndicator: true
