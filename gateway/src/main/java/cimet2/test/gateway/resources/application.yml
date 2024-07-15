@@ -7,7 +7,19 @@ spring:
   cloud:
     gateway:
       routes:
-        - id: DEMO-SERVICE
-          uri: http://localhost:9090
+        - id: SERVICE-A
+          uri: http://localhost:8081
           predicates:
-            - Path=/demo/**
+            - Path=/service-a/**
+        - id: SERVICE-B
+          uri: http://localhost:8082
+          predicates:
+            - Path=/service-b/**
+        - id: SERVICE-C
+          uri: http://localhost:8083
+          predicates:
+            - Path=/service-c/**
+        - id: SERVICE-D
+          uri: http://localhost:8084
+          predicates:
+            - Path=/service-d/**
