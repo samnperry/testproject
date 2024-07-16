@@ -1,4 +1,5 @@
 /.vscode
+gateway/target/
 microservice-a/target/
 microservice-b/target/
 microservice-c/target/
