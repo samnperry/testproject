@@ -11,4 +11,8 @@ public class ServiceC {
     public String callServiceA() {
         return restTemplate.getForObject("/service-a/call-c", String.class);
     }
+
+    public String callServiceE() {
+        return restTemplate.getForObject("/service-e/call-c", String.class); 
+    }
 }
